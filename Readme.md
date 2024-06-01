@@ -28,6 +28,8 @@ This is a console-based flight ticket booking application written in Java. The a
 ### Database Setup
 
 ERD:
+![flight_booking](https://github.com/sandeepshekhawat/FlightX/assets/82081109/d79f95da-839b-4f11-8f18-432aaa0c93ec)
+
 1. Create a MySQL database named `flight_booking`.
 2. Create the necessary tables using the following SQL scripts:
     ```sql
