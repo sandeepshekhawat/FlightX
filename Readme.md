@@ -37,24 +37,25 @@ ERD:
         id INT AUTO_INCREMENT PRIMARY KEY,
         username VARCHAR(50) NOT NULL,
         password VARCHAR(50) NOT NULL,
-        role VARCHAR(20) NOT NULL
+        role ENUM('user', 'admin') NOT NULL
     );
 
     CREATE TABLE Flights (
         id INT AUTO_INCREMENT PRIMARY KEY,
-        flightName VARCHAR(100) NOT NULL,
-        flightNumber VARCHAR(20) NOT NULL,
+        flight_name VARCHAR(100) NOT NULL,
+        flight_number VARCHAR(100) NOT NULL,
         date DATE NOT NULL,
-        seatsAvailable INT NOT NULL
+        seats_available INT NOT NULL DEFAULT 60
     );
 
     CREATE TABLE Bookings (
         id INT AUTO_INCREMENT PRIMARY KEY,
-        userId INT,
-        flightId INT,
-        seatsBooked INT,
-        FOREIGN KEY (userId) REFERENCES Users(id),
-        FOREIGN KEY (flightId) REFERENCES Flights(id)
+        user_id INT,
+        flight_id INT,
+        date DATE NOT NULL,
+        seat_count INT NOT NULL,
+        FOREIGN KEY (user_id) REFERENCES Users(id),
+        FOREIGN KEY (flight_id) REFERENCES Flights(id)
     );
     ```
 
