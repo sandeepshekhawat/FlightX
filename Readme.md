@@ -62,8 +62,7 @@ ERD:
 ### Project Setup
 1. Clone the repository:
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone git@github.com:sandeepshekhawat/FlightX.git
     ```
 2. Update the `DBConnection` class with your MySQL database credentials.
     ```java
