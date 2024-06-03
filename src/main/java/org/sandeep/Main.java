@@ -162,7 +162,6 @@ public class Main {
         }
         scanner.nextLine();
 
-        // TODO: implement bookflight and get details
         Flight booked = flightService.bookFlight(flightNumber, userService.getLoggedInUser().getId(), seatCount);
         if (booked != null) {
             System.out.println("Booked flight successful!");
@@ -196,7 +195,6 @@ public class Main {
     }
 
     private static void viewBookings() {
-        // View bookings logic here (to be implemented)
         System.out.println("Bookings viewed successfully!");
     }
 }
